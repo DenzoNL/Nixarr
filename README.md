@@ -41,9 +41,9 @@ To import and use this in your own NixOS flake:
       system = "x86_64-linux";
       modules = [
         { pkgs, ... }: {
-          imports = [ nixarr.nixosModules.nixarr ];
-          domain = "mydomain.com";  # replace with your domain
-          email = "myemail@domain.com";  # replace with your email
+          imports = [ nixarr.nixosModules.nixarr ]; # Import the nixarr module
+          services.nixarr.domain = "mydomain.com";  # replace with your domain
+          services.nixarr.email = "myemail@domain.com";  # replace with your email
         }
       ];
     };

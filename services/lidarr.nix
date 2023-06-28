@@ -5,7 +5,7 @@
     enable = true;
   };
 
-  services.nginx.virtualHosts."lidarr.${config.domain}" = {
+  services.nginx.virtualHosts."lidarr.${config.services.nixarr.domain}" = {
     forceSSL = true;
     enableACME = true;
     http2 = true;
