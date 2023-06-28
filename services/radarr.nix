@@ -1,14 +1,11 @@
 { config, ... }:
 
-let
-  domain = config.domain;
-in
 {
   services.radarr = {
     enable = true;
   };
 
-  services.nginx.virtualHosts."radarr.${domain}" = {
+  services.nginx.virtualHosts."radarr.${config.domain}" = {
     forceSSL = true;
     enableACME = true;
     http2 = true;

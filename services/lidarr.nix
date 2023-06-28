@@ -1,14 +1,11 @@
 { config, ... }:
 
-let
-  domain = config.domain;
-in
 {
   services.lidarr = {
     enable = true;
   };
 
-  services.nginx.virtualHosts."lidarr.${domain}" = {
+  services.nginx.virtualHosts."lidarr.${config.domain}" = {
     forceSSL = true;
     enableACME = true;
     http2 = true;
