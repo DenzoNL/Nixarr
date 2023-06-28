@@ -9,7 +9,7 @@
     security.acme = {
       acceptTerms = true;
       defaults = {
-        email = config.nixarr.email;
+        email = config.services.nixarr.email;
       };
     };
 

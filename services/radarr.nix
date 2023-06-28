@@ -6,7 +6,7 @@
       enable = true;
     };
 
-    services.nginx.virtualHosts."radarr.${config.nixarr.domain}" = {
+    services.nginx.virtualHosts."radarr.${config.services.nixarr.domain}" = {
       forceSSL = true;
       enableACME = true;
       http2 = true;
