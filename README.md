@@ -33,7 +33,7 @@ To import and use this in your own NixOS flake:
   description = "My NixOS configuration";
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-  inputs.nixarr.url = "gitnux:DenzoNL";
+  inputs.nixarr.url = "github:DenzoNL/Nixarr";
 
   outputs = { self, nixpkgs, nixarr }: {
 
