@@ -1,5 +1,8 @@
-{ domain, ... }:
+{ config, ... }:
 
+let
+  domain = config.domain;
+in
 {
   services.sonarr = {
     enable = true;

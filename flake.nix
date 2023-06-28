@@ -7,10 +7,10 @@
 
     nixosModules.nixarr = { config, ... }: {
       imports = [
-        (import ./services/sonarr.nix { inherit (config) domain; })
-        (import ./services/radarr.nix { inherit (config) domain; })
-        (import ./services/lidarr.nix { inherit (config) domain; })
-        (import ./services/nginx.nix { inherit (config) email; })
+        ./services/sonarr.nix
+        ./services/radarr.nix
+        ./services/lidarr.nix
+        ./services/nginx.nix
       ];
     };
   };

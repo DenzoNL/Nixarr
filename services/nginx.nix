@@ -1,5 +1,8 @@
-{ email, ... }: 
+{ config, ... }: 
 
+let
+  email = config.email;
+in
 {
   services.nginx = {
     enable = true;
