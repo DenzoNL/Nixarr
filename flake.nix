@@ -7,12 +7,10 @@
 
     nixosModules.nixarr = { config, ... }: {
       imports = [
-        { 
-          services.sonarr = import ./services/sonarr.nix { inherit (config) domain; };
-          services.radarr = import ./services/radarr.nix { inherit (config) domain; };
-          services.lidarr = import ./services/lidarr.nix { inherit (config) domain; };
-          services.nginx = import ./services/nginx.nix { inherit (config) email; };
-        }
+        (import ./services/sonarr.nix { inherit (config) domain; })
+        (import ./services/radarr.nix { inherit (config) domain; })
+        (import ./services/lidarr.nix { inherit (config) domain; })
+        (import ./services/nginx.nix { inherit (config) email; })
       ];
     };
   };
