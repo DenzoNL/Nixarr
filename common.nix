@@ -1,7 +1,7 @@
 { lib, ... }:
 
 {
-  options.nixarr = {
+  options.services.nixarr = {
     domain = lib.mkOption {
       type = lib.types.str;
       default = "example.com";
